@@ -1,10 +1,10 @@
-import {BrowserRouter as Router,Route,Routes,Navigate} from 'react-router'
+import {BrowserRouter as  Router , Route,Routes,Navigate } from 'react-router'
 import Login from './pages/Auth/Login'
 import SignUp from './pages/Auth/SignUp'
 import Home from './pages/Dashboard/Home'
 import Income from './pages/Dashboard/Income'
-import Expense from './pages/Dashboard/Expense'
-
+import Expenses from './pages/Dashboard/Expenses'
+import Error from './pages/Error/Error'
 
 function App() {
   
@@ -18,13 +18,9 @@ function App() {
             <Route path='/sign-up' element={<SignUp />} />
             <Route path='/dashboard' element={<Home/>} />
             <Route path='/income' element={<Income/>} />
-            <Route path='/expense' element={<Expense/>} />
+            <Route path='/expenses' element={<Expenses/>} />
 
-
-
-            
-
-
+            <Route path='*' element={<Error />} />
         </Routes>
 
       </Router>
